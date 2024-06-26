@@ -4,47 +4,69 @@ body {
     padding: 0;
     background-color: #f4f4f4;
 }
+
 header {
     background: #333;
     color: #fff;
     padding: 10px;
     text-align: center;
 }
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-container img.logo {
+    width: 50px; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+    margin-right: 10px; /* Espacio entre el logo y el título */
+}
+
 nav ul {
     list-style: none;
     padding: 0;
     display: flex;
     justify-content: center;
 }
+
 nav ul li {
     margin: 0 10px;
 }
+
 nav ul li a {
     color: #fff;
     text-decoration: none;
 }
+
 nav ul li a.active {
     font-weight: bold;
 }
+
 main {
     padding: 20px;
 }
+
 .hidden {
     display: none;
 }
+
 .form-group {
     margin-bottom: 15px;
 }
+
 .form-group label {
     display: block;
     margin-bottom: 5px;
 }
-.form-group input,
-.form-group select {
+
+.form-group select,
+.form-group input {
     width: 100%;
     padding: 8px;
     box-sizing: border-box;
 }
+
 button {
     display: block;
     width: 100%;
@@ -54,26 +76,32 @@ button {
     border: none;
     cursor: pointer;
 }
+
 button:hover {
     background: #555;
 }
+
 table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
 }
+
 table, th, td {
     border: 1px solid #ddd;
 }
+
 th, td {
     padding: 10px;
     text-align: center;
 }
+
 #carrousel {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
 }
+
 .carrousel-item {
     flex: 0 0 auto;
     width: 80%;
@@ -84,3 +112,31 @@ th, td {
     scroll-snap-align: center;
     text-align: center;
 }
+
+input[type="number"] {
+    width: 60px; /* Ajusta el tamaño según sea necesario */
+    text-align: center;
+}
+
+.form-group.inline {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Ajusta el espacio entre los elementos según sea necesario */
+}
+
+.form-group.inline label {
+    margin-bottom: 0; /* Elimina el margen inferior de las etiquetas para que se alineen correctamente */
+}
+
+.form-group.inline .field {
+    flex: 1; /* Hace que los elementos ocupen el mismo espacio */
+}
+
+#clase {
+    width: 150px; /* Ajusta el tamaño según sea necesario */
+}
+
+#nivel {
+    width: 80px; /* Ajusta el tamaño según sea necesario */
+}
+
