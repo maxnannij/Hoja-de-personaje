@@ -18,7 +18,7 @@ header {
 }
 
 .logo-container img.logo {
-    width: 200px; /* Ajusta el tamaño según sea necesario */
+    width: 150px; /* Ajusta el tamaño según sea necesario */
     height: auto;
     margin-right: 10px; /* Espacio entre el logo y el título */
 }
