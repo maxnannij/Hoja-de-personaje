@@ -11,12 +11,13 @@
   <header>
     <div class="logo-container">
       <img src="logo.png" alt="Logo del Juego" class="logo">
-      <h1>RPG Asistente</h1>
+     <h1>RPG Asistente</h1>
       </div>
       <nav>
         <ul>
           <li><a href="#" id="tab1" class="active">Atributos y Habilidades</a></li>
           <li><a href="#" id="tab2">Poderes</a></li>
+          <li><a href="#" id="tab3">Mapa</a></li>
         </ul>
       </nav>
   </header>
@@ -35,17 +36,17 @@
           <tr>
             <td>Fuerza (FUE)</td>
             <td><input type="number" id="fuerza" value="0" onchange="actualizarModificadores()"></td>
-            <td><span id="mod_fuerza">1</span></td>
+            <td><span id="mod_fuerza">0</span></td>
           </tr>
           <tr>
             <td>Agilidad (AGI)</td>
             <td><input type="number" id="agilidad" value="0" onchange="actualizarModificadores()"></td>
-            <td><span id="mod_agilidad">3</span></td>
+            <td><span id="mod_agilidad">0</span></td>
           </tr>
           <tr>
             <td>Inteligencia (INT)</td>
             <td><input type="number" id="inteligencia" value="0" onchange="actualizarModificadores()"></td>
-            <td><span id="mod_inteligencia">1</span></td>
+            <td><span id="mod_inteligencia">0</span></td>
           </tr>
           <tr>
             <td>Carisma (CAR)</td>
@@ -54,75 +55,84 @@
           </tr>
         </tbody>
       </table>
-      <table>
+    <table>
         <thead>
-          <tr>
-            <th>Habilidad</th>
-            <th>Atributo</th>
-            <th>Valor</th>
-            <th>Mod.</th>
-            <th>Total</th>
-          </tr>
+            <tr>
+                <th>Habilidad</th>
+                <th>Atributo</th>
+                <th>Valor</th>
+                <th>Equipo</th>
+                <th>Mod.</th>
+                <th>Total</th>
+            </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Lucha</td>
-            <td>FUE</td>
-            <td><input type="number" id="lucha" value="0" onchange="actualizarHabilidades()"></td>
-            <td><span id="mod_lucha">1</span></td>
-            <td><span id="total_lucha">5</span></td>
-          </tr>
-          <tr>
-            <td>Levantar Peso</td>
-            <td>FUE</td>
-            <td><input type="number" id="levantar_peso" value="0" onchange="actualizarHabilidades()"></td>
-            <td><span id="mod_levantar_peso">1</span></td>
-            <td><span id="total_levantar_peso">4</span></td>
-          </tr>
-          <tr>
-            <td>Esquivar</td>
-            <td>AGI</td>
-            <td><input type="number" id="esquivar" value="0" onchange="actualizarHabilidades()"></td>
-            <td><span id="mod_esquivar">3</span></td>
-            <td><span id="total_esquivar">9</span></td>
-          </tr>
-          <tr>
-            <td>Sigilo</td>
-            <td>AGI</td>
-            <td><input type="number" id="sigilo" value="0" onchange="actualizarHabilidades()"></td>
-            <td><span id="mod_sigilo">3</span></td>
-            <td><span id="total_sigilo">10</span></td>
-          </tr>
-          <tr>
-            <td>Resolver Acertijos</td>
-            <td>INT</td>
-            <td><input type="number" id="resolver_acertijos" value="0" onchange="actualizarHabilidades()"></td>
-            <td><span id="mod_resolver_acertijos">1</span></td>
-            <td><span id="total_resolver_acertijos">5</span></td>
-          </tr>
-          <tr>
-            <td>Percepción</td>
-            <td>INT</td>
-            <td><input type="number" id="percepcion" value="0" onchange="actualizarHabilidades()"></td>
-            <td><span id="mod_percepcion">1</span></td>
-            <td><span id="total_percepcion">6</span></td>
-          </tr>
-          <tr>
-            <td>Persuasión</td>
-            <td>CAR</td>
-            <td><input type="number" id="persuasion" value="0" onchange="actualizarHabilidades()"></td>
-            <td><span id="mod_persuasion">0</span></td>
-            <td><span id="total_persuasion">3</span></td>
-          </tr>
-          <tr>
-            <td>Engaño</td>
-            <td>CAR</td>
-            <td><input type="number" id="engano" value="0" onchange="actualizarHabilidades()"></td>
-            <td><span id="mod_engano">0</span></td>
-            <td><span id="total_engano">4</span></td>
-          </tr>
+            <tr>
+                <td>Lucha</td>
+                <td>FUE</td>
+                <td><input type="number" id="lucha" value="0" onchange="actualizarHabilidades()"></td>
+                <td><input type="number" id="equipo_lucha" value="0" onchange="actualizarHabilidades()"></td>
+                <td><span id="mod_lucha">0</span></td>
+                <td><span id="total_lucha">0</span></td>
+            </tr>
+            <tr>
+                <td>Levantar Peso</td>
+                <td>FUE</td>
+                <td><input type="number" id="levantar_peso" value="0" onchange="actualizarHabilidades()"></td>
+                <td><input type="number" id="equipo_levantar_peso" value="0" onchange="actualizarHabilidades()"></td>
+                <td><span id="mod_levantar_peso">0</span></td>
+                <td><span id="total_levantar_peso">0</span></td>
+            </tr>
+            <tr>
+                <td>Esquivar</td>
+                <td>AGI</td>
+                <td><input type="number" id="esquivar" value="0" onchange="actualizarHabilidades()"></td>
+                <td><input type="number" id="equipo_esquivar" value="0" onchange="actualizarHabilidades()"></td>
+                <td><span id="mod_esquivar">0</span></td>
+                <td><span id="total_esquivar">0</span></td>
+            </tr>
+            <tr>
+                <td>Sigilo</td>
+                <td>AGI</td>
+                <td><input type="number" id="sigilo" value="0" onchange="actualizarHabilidades()"></td>
+                <td><input type="number" id="equipo_sigilo" value="0" onchange="actualizarHabilidades()"></td>
+                <td><span id="mod_sigilo">0</span></td>
+                <td><span id="total_sigilo">0</span></td>
+            </tr>
+            <tr>
+                <td>Resolver Acertijos</td>
+                <td>INT</td>
+                <td><input type="number" id="resolver_acertijos" value="0" onchange="actualizarHabilidades()"></td>
+                <td><input type="number" id="equipo_resolver_acertijos" value="0" onchange="actualizarHabilidades()"></td>
+                <td><span id="mod_resolver_acertijos">0</span></td>
+                <td><span id="total_resolver_acertijos">0</span></td>
+            </tr>
+            <tr>
+                <td>Percepción</td>
+                <td>INT</td>
+                <td><input type="number" id="percepcion" value="0" onchange="actualizarHabilidades()"></td>
+                <td><input type="number" id="equipo_percepcion" value="0" onchange="actualizarHabilidades()"></td>
+                <td><span id="mod_percepcion">0</span></td>
+                <td><span id="total_percepcion">0</span></td>
+            </tr>
+            <tr>
+                <td>Persuasión</td>
+                <td>CAR</td>
+                <td><input type="number" id="persuasion" value="0" onchange="actualizarHabilidades()"></td>
+                <td><input type="number" id="equipo_persuasion" value="0" onchange="actualizarHabilidades()"></td>
+                <td><span id="mod_persuasion">0</span></td>
+                <td><span id="total_persuasion">0</span></td>
+            </tr>
+            <tr>
+                <td>Engaño</td>
+                <td>CAR</td>
+                <td><input type="number" id="engano" value="0" onchange="actualizarHabilidades()"></td>
+                <td><input type="number" id="equipo_engano" value="0" onchange="actualizarHabilidades()"></td>
+                <td><span id="mod_engano">0</span></td>
+                <td><span id="total_engano">0</span></td>
+            </tr>
         </tbody>
-      </table>
+    </table>
    </section>
         <section id="section2" class="hidden">
             <h2>Poderes del Héroe</h2>
@@ -144,6 +154,10 @@
                 </div>
             </div>
             <div id="carrousel"></div>
+        </section>
+    <section id="section3" class="hidden">
+            <h2>Mapa Interactivo</h2>
+            <!-- Contenido para el mapa interactivo -->
         </section>
     </main>
   <script src="calculos.js"></script>
