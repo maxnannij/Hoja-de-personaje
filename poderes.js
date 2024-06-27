@@ -95,3 +95,5 @@ function mostrarPoderes() {
 
 // Inicializar los modificadores y habilidades al cargar la página
 actualizarModificadores();
+
+
