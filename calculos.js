@@ -50,19 +50,6 @@ function actualizarHabilidades() {
     document.getElementById('total_engano').textContent = engano + modCarisma;
 }
 
-function mostrarPoderes() {
-    const clase = document.getElementById('clase').value;
-    const nivel = parseInt(document.getElementById('nivel').value) || 0;
-    const carrousel = document.getElementById('carrousel');
-
-    // Esta lógica debería ser reemplazada por la lógica real para obtener los poderes del héroe basado en la clase y el nivel
-    carrousel.innerHTML = `
-        <div class="carrousel-item">${clase} Poder 1 (Nivel ${nivel})</div>
-        <div class="carrousel-item">${clase} Poder 2 (Nivel ${nivel})</div>
-        <div class="carrousel-item">${clase} Poder 3 (Nivel ${nivel})</div>
-    `;
-}
-
 // Añadir eventos 'input' para actualizar en vivo
 document.getElementById('fuerza').addEventListener('input', actualizarModificadores);
 document.getElementById('agilidad').addEventListener('input', actualizarModificadores);
