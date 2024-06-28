@@ -155,10 +155,20 @@
             </div>
             <div id="carrousel"></div>
         </section>
-    <section id="section3" class="hidden">
-            <h2>Mapa Interactivo</h2>
-            <!-- Contenido para el mapa interactivo -->
-        </section>
+   <section id="section3" class="hidden">
+    <h2>Mapa Interactivo</h2>
+    <div id="controls">
+        <button id="reset-button">Reiniciar Posición</button>
+        <input type="text" id="map-code" placeholder="Ingrese código del mapa">
+        <button id="load-map-button">Cargar Mapa</button>
+    </div>
+    <div id="map-container">
+        <div id="map-content">
+            <img id="map" src="path/to/your/default-map.jpg" alt="Mapa" />
+            <div id="grid"></div>
+        </div>
+    </div>
+</section>
     </main>
   <script src="calculos.js"></script>
     <script src="tabs.js"></script>
