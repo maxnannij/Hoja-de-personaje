@@ -195,8 +195,8 @@ select {
 
 #map-container {
     position: relative;
-    width: 720px;
-    height: 720px;
+   width: 100%;
+    height: 100vh;
     touch-action: none;
     background-color: #f0f0f0; /* Color de fondo para visualizar mejor la cuadrícula */
     overflow: hidden; /* Para que el contenido no se desborde */
@@ -214,8 +214,10 @@ select {
 }
 
 #map {
-    width: 720px;
-    height: 720px;
+    max-width: none;
+    max-height: none;
+    width: auto;
+    height: auto;
     transform-origin: center center;
 }
 
