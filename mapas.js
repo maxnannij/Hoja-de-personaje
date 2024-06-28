@@ -17,7 +17,7 @@ let longPressTimeout;
 
 const mapCodes = {
     'felicitaciones': 'Tribulacionllegada.jpg',
-    'code2': 'path/to/map2.jpg',
+    'prueba': 'prueba.jpg',
     // Agrega más códigos y rutas a mapas según sea necesario
 };
 
