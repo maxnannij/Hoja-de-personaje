@@ -24,6 +24,16 @@
   <main>
     <section id="section1">
       <h2>Calcula tus Atributos y Habilidades</h2>
+      <div>
+        <label for="objeto">Valor del Objeto:</label>
+        <input type="number" id="objeto" value="0" onchange="actualizarDanioAtaque()">
+        <label for="dado">Valor del Dado:</label>
+        <input type="number" id="dado" value="0" onchange="actualizarDanioAtaque()">
+    </div>
+    <div>
+        <label for="danio-ataque">Daño de Ataque:</label>
+        <input type="text" id="danio-ataque" readonly>
+    </div>
       <table>
         <thead>
           <tr>
