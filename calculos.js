@@ -52,7 +52,14 @@ function actualizarModificadores() {
 
     actualizarHabilidades();
 }
+function actualizarDanioAtaque() {
+    const modFuerza = parseInt(document.getElementById("mod_fuerza").textContent) || 0;
+    const objeto = parseInt(document.getElementById("objeto").value) || 0;
+    const dado = parseInt(document.getElementById("dado").value) || 0;
 
+    const danioAtaque = modFuerza + objeto + dado;
+    document.getElementById("danio-ataque").value = danioAtaque;
+}
 function actualizarHabilidades() {
     const modFuerza = parseInt(document.getElementById('mod_fuerza').textContent) || 0;
     const modAgilidad = parseInt(document.getElementById('mod_agilidad').textContent) || 0;
