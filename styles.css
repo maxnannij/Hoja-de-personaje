@@ -118,7 +118,18 @@ td {
   padding: 10px;
   text-align: center;
 }
+#danio-ataque {
+    font-weight: bold;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: white;
+}
 
+#objeto, #dado {
+    width: 50px;
+    text-align: center;
+    margin: 0 5px;
+}
 #carrousel {
   display: flex;
   overflow-x: auto;
