@@ -12,13 +12,14 @@ const poderesArquero = [
 const poderesCruzado = [
     { nivel: 1, poder: "Embestida", descripcion: "Embiste contra un enemigo. Tira un D6. Si el resultado es 6, el enemigo queda aturdido por 1 turno. A partir de nivel 10, aturde por 2 turnos si es 5 o 6. A partir de nivel 15, añade 1d6 de daño." },
     { nivel: 1, poder: "Piel de Roble", descripcion: "Aumenta el valor de Lucha en +2 por 3 turnos. A partir de nivel 10, el aumento es de +3. A partir de nivel 15, dura 5 turnos." },
-    { nivel: 2, poder: "Golpe Devastador", descripcion: "Lanza un golpe con todas tus fuerzas. haciendo D6 de daño. Quedas agotado por 1 turno. A partir de nivel 6, tira un D12 y no causa agotamiento. A partir de nivel 12, el daño se duplica (2xD12)." },
+    { nivel: 2, poder: "Golpe Devastador", descripcion: "Lanza un golpe con todas tus fuerzas, haciendo D6 de daño. Quedas agotado por 1 turno. A partir de nivel 6, tira un D12 y no causa agotamiento. A partir de nivel 12, el daño se duplica (2xD12)." },
     { nivel: 3, poder: "Grito de Guerra", descripcion: "Aumenta tu Agilidad en +2, pero los enemigos enfocan sus ataques en ti. A partir de nivel 10, también aumenta la Fuerza en +2. A partir de nivel 15, los aliados cercanos también reciben +1 a la Agilidad." },
     { nivel: 4, poder: "Amenaza de Muerte", descripcion: "Haz una tirada de persuasión con un D12. Si es mayor a 10, la Fuerza del enemigo cae en -4. A partir de nivel 10, la tirada se hace con un D20. A partir de nivel 15, la Fuerza del enemigo cae en -6." },
     { nivel: 5, poder: "Sangre Santa", descripcion: "Cura al grupo por la cantidad de vida que has perdido. A partir de nivel 10, cura 1d6 de vida adicional. A partir de nivel 15, cura 1d8 de vida adicional." },
     { nivel: 6, poder: "Arrojar el Arma", descripcion: "Arrojas tu arma, haciendo 10 veces el daño del arma. Tira un D8; si el resultado es 7 o más, el arma se rompe. A partir de nivel 10, el daño es 12 veces el daño del arma. A partir de nivel 15, tira un D12 en lugar de un D8." },
     { nivel: 7, poder: "Sacrificio", descripcion: "Sacrifica X puntos de vida; esa cantidad se suma a Fuerza y Agilidad por el resto del combate. A partir de nivel 15, otorga resistencia al daño (reduce el daño recibido en 25%)." },
 ];
+
 const poderesPaladin = [
     { nivel: 1, poder: "Golpe Celestial", descripcion: "Añade a tu ataque luz divina haciendo +3 de daño, este daño golpea aunque el ataque falle. A partir de nivel 10, añade +5 de daño. A partir de nivel 15, añade +7 de daño y ciega al enemigo por 1 turno si el ataque golpea." },
     { nivel: 1, poder: "Luz Protectora", descripcion: "Cubre de luz a un aliado añadiendo +2 de evasión por 3 turnos. A partir de nivel 10, añade +3 de evasión. A partir de nivel 15, dura 5 turnos." },
@@ -29,6 +30,7 @@ const poderesPaladin = [
     { nivel: 6, poder: "Salto de Fe", descripcion: "Con un gran salto caes sobre los enemigos haciendo D6 de daño. A partir de nivel 10, tira un D8. A partir de nivel 15, tira un D10." },
     { nivel: 7, poder: "Sangre Sagrada", descripcion: "Al morir, vuelve a la vida con 50% de la vida total. A partir de nivel 10, vuelve con el 75% de la vida. A partir de nivel 15, vuelve con el 100% y cura a los aliados cercanos por 25% de su vida." },
 ];
+
 const poderesPicaro = [
     { nivel: 1, poder: "Ataque Rápido", descripcion: "Realiza varios ataques rápidos. Ataca D4 veces, cada ataque hace D4 de daño. A partir de nivel 10, ataca D6 veces con D6 de daño. A partir de nivel 15, ataca D8 veces con D8 de daño." },
     { nivel: 1, poder: "Sigiloso", descripcion: "Aumenta tu capacidad de esquivar. Aumenta Esquivar en D4 por 3 turnos. A partir de nivel 10, aumenta en D6. A partir de nivel 15, dura 5 turnos." },
@@ -45,11 +47,12 @@ const poderesSacerdote = [
     { nivel: 1, poder: "Palabra Sagrada", descripcion: "Bendice al grupo, mejorando la LUCHA en +3 por el resto del combate. A partir de nivel 10, mejora la AGILIDAD en +2." },
     { nivel: 2, poder: "Luz Renovadora", descripcion: "Cura el 10% de la vida total de todo el grupo. A partir de nivel 10, cura el 15%. A partir de nivel 15, cura el 20%." },
     { nivel: 3, poder: "Protección Divina", descripcion: "Protege a todo el grupo del próximo ataque enemigo. A partir de nivel 10, refleja el 25% del daño bloqueado. A partir de nivel 15, refleja el 50%." },
-    { nivel: 4, poder: "Santificación", descripcion: "Dios mismo te deja usar su luz, si se usa sobre un aliado cura D6, si se usa contra un enemigo hace D6 de daño, si la naturaleza del enemigo es diabólica el daño es doble. A partir de nivel 10 se utiliza un D12. A partir de nivel 15 tira milagro si es +15 en enemigo se rinde" },
+    { nivel: 4, poder: "Santificación", descripcion: "Dios mismo te deja usar su luz, si se usa sobre un aliado cura D6, si se usa contra un enemigo hace D6 de daño, si la naturaleza del enemigo es diabólica el daño es doble. A partir de nivel 10 se utiliza un D12. A partir de nivel 15 tira milagro si es +15 en enemigo se rinde." },
     { nivel: 5, poder: "Renovación", descripcion: "Limpia al equipo de todos los debuffs. A partir de nivel 10, otorga inmunidad a nuevos debuffs por 1 turno. A partir de nivel 15, la inmunidad dura 2 turnos." },
     { nivel: 6, poder: "Resurrección", descripcion: "Devuelve la vida a un aliado caído con el 50% de su vida total. A partir de nivel 10, con el 75%. A partir de nivel 15, con el 100%." },
     { nivel: 7, poder: "Luz Divina", descripcion: "Tira un D20. Si es 10 o más, cura completamente a todo el grupo. A partir de nivel 10, cura completamente y elimina todos los debuffs. A partir de nivel 15, otorga +2 a todos los atributos durante 3 turnos." },
 ];
+
 const poderesSalmista = [
     { nivel: 1, poder: "Canto Inspirador", descripcion: "Añade +2 a la Lucha de todo el grupo por 3 turnos. A partir de nivel 10, añade +1 a la Agilidad. A partir de nivel 15, dura 5 turnos." },
     { nivel: 1, poder: "Melodía Curativa", descripcion: "Cura el 15% de la vida total de un aliado. A partir de nivel 10, cura el 20%. A partir de nivel 15, cura el 25%." },
