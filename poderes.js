@@ -12,7 +12,7 @@ const poderesArquero = [
 const poderesCruzado = [
     { nivel: 1, poder: "Embestida", descripcion: "Embiste contra un enemigo. Tira un D6. Si el resultado es 6, el enemigo queda aturdido por 1 turno. A partir de nivel 10, aturde por 2 turnos si es 5 o 6. A partir de nivel 15, añade 1d6 de daño." },
     { nivel: 1, poder: "Piel de Roble", descripcion: "Aumenta el valor de Lucha en +2 por 3 turnos. A partir de nivel 10, el aumento es de +3. A partir de nivel 15, dura 5 turnos." },
-    { nivel: 2, poder: "Golpe Devastador", descripcion: "Lanza un golpe con todas tus fuerzas. Tira un D6. Quedas agotado por 1 turno. A partir de nivel 6, tira un D12 y no causa agotamiento. A partir de nivel 12, el daño se duplica (2xD12)." },
+    { nivel: 2, poder: "Golpe Devastador", descripcion: "Lanza un golpe con todas tus fuerzas. haciendo D6 de daño. Quedas agotado por 1 turno. A partir de nivel 6, tira un D12 y no causa agotamiento. A partir de nivel 12, el daño se duplica (2xD12)." },
     { nivel: 3, poder: "Grito de Guerra", descripcion: "Aumenta tu Agilidad en +2, pero los enemigos enfocan sus ataques en ti. A partir de nivel 10, también aumenta la Fuerza en +2. A partir de nivel 15, los aliados cercanos también reciben +1 a la Agilidad." },
     { nivel: 4, poder: "Amenaza de Muerte", descripcion: "Haz una tirada de persuasión con un D12. Si es mayor a 10, la Fuerza del enemigo cae en -4. A partir de nivel 10, la tirada se hace con un D20. A partir de nivel 15, la Fuerza del enemigo cae en -6." },
     { nivel: 5, poder: "Sangre Santa", descripcion: "Cura al grupo por la cantidad de vida que has perdido. A partir de nivel 10, cura 1d6 de vida adicional. A partir de nivel 15, cura 1d8 de vida adicional." },
@@ -45,16 +45,17 @@ const poderesSacerdote = [
     { nivel: 1, poder: "Palabra Sagrada", descripcion: "Bendice al grupo, mejorando la LUCHA en +3 por el resto del combate. A partir de nivel 10, mejora la AGILIDAD en +2." },
     { nivel: 2, poder: "Luz Renovadora", descripcion: "Cura el 10% de la vida total de todo el grupo. A partir de nivel 10, cura el 15%. A partir de nivel 15, cura el 20%." },
     { nivel: 3, poder: "Protección Divina", descripcion: "Protege a todo el grupo del próximo ataque enemigo. A partir de nivel 10, refleja el 25% del daño bloqueado. A partir de nivel 15, refleja el 50%." },
-    { nivel: 4, poder: "Purificación", descripcion: "Tira un D20. Si es 15 o más, purifica el área o un enemigo. A partir de nivel 10, éxito con 12 o más. A partir de nivel 15, éxito con 10 o más y elimina todos los debuffs." },
+    { nivel: 4, poder: "Santificación", descripcion: "Dios mismo te deja usar su luz, si se usa sobre un aliado cura D6, si se usa contra un enemigo hace D6 de daño, si la naturaleza del enemigo es diabólica el daño es doble. A partir de nivel 10 se utiliza un D12. A partir de nivel 15 tira milagro si es +15 en enemigo se rinde" },
     { nivel: 5, poder: "Renovación", descripcion: "Limpia al equipo de todos los debuffs. A partir de nivel 10, otorga inmunidad a nuevos debuffs por 1 turno. A partir de nivel 15, la inmunidad dura 2 turnos." },
     { nivel: 6, poder: "Resurrección", descripcion: "Devuelve la vida a un aliado caído con el 50% de su vida total. A partir de nivel 10, con el 75%. A partir de nivel 15, con el 100%." },
     { nivel: 7, poder: "Luz Divina", descripcion: "Tira un D20. Si es 10 o más, cura completamente a todo el grupo. A partir de nivel 10, cura completamente y elimina todos los debuffs. A partir de nivel 15, otorga +2 a todos los atributos durante 3 turnos." },
-];const poderesSalmista = [
+];
+const poderesSalmista = [
     { nivel: 1, poder: "Canto Inspirador", descripcion: "Añade +2 a la Lucha de todo el grupo por 3 turnos. A partir de nivel 10, añade +1 a la Agilidad. A partir de nivel 15, dura 5 turnos." },
     { nivel: 1, poder: "Melodía Curativa", descripcion: "Cura el 15% de la vida total de un aliado. A partir de nivel 10, cura el 20%. A partir de nivel 15, cura el 25%." },
     { nivel: 2, poder: "Ritmo de Protección", descripcion: "Añade +2 a la AGI del grupo por 3 turnos. A partir de nivel 10, añade +3 a la AGI. A partir de nivel 15, dura 5 turnos." },
     { nivel: 3, poder: "Armonía Energizante", descripcion: "Restaura 10% de la energía de todos los miembros del grupo. A partir de nivel 10, restaura 15%. A partir de nivel 15, restaura 20%." },
-    { nivel: 4, poder: "Himno del Valor", descripcion: "Aumenta la Fuerza en +3 por 3 turnos. A partir de nivel 10, también aumenta la AGI en +2. A partir de nivel 15, dura 5 turnos." },
+    { nivel: 4, poder: "Sonidos chirriantes", descripcion: "Diriges una oleada de tus peores notas hacia el enemigo haciendo D6 de daño, no se puede esquivar. A partir de nivel 10 usa un D20 y a partir de nivel 15 puede aturdir con un +15." },
     { nivel: 5, poder: "Canción de Esperanza", descripcion: "Elimina todos los debuffs del grupo. A partir de nivel 10, otorga inmunidad a nuevos debuffs por 1 turno. A partir de nivel 15, la inmunidad dura 2 turnos." },
     { nivel: 6, poder: "Solo Heroico", descripcion: "El próximo ataque de cada miembro del grupo hace el doble de daño. A partir de nivel 10, hace el triple de daño. A partir de nivel 15, el ataque ignora cualquier defensa del enemigo." },
     { nivel: 7, poder: "Resonancia Divina", descripcion: "Cura completamente a todo el grupo. A partir de nivel 10, elimina todos los debuffs. A partir de nivel 15, otorga +2 a todos los atributos durante 3 turnos." },
