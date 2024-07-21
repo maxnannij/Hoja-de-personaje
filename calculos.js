@@ -52,6 +52,7 @@ function actualizarModificadores() {
 
     actualizarHabilidades();
 }
+
 function actualizarDanioAtaque() {
     const modFuerza = parseInt(document.getElementById("mod_fuerza").textContent) || 0;
     const objeto = parseInt(document.getElementById("objeto").value) || 0;
@@ -60,12 +61,8 @@ function actualizarDanioAtaque() {
     const danioAtaque = modFuerza + objeto + dado;
     document.getElementById("danio-ataque").value = danioAtaque;
 }
-function actualizarHabilidades() {
-    const modFuerza = parseInt(document.getElementById('mod_fuerza').textContent) || 0;
-    const modAgilidad = parseInt(document.getElementById('mod_agilidad').textContent) || 0;
-    const modInteligencia = parseInt(document.getElementById('mod_inteligencia').textContent) || 0;
-    const modCarisma = parseInt(document.getElementById('mod_carisma').textContent) || 0;
 
+function actualizarHabilidades() {
     const equipoLucha = parseInt(document.getElementById('equipo_lucha').value) || 0;
     const equipoLevantarPeso = parseInt(document.getElementById('equipo_levantar_peso').value) || 0;
     const equipoEsquivar = parseInt(document.getElementById('equipo_esquivar').value) || 0;
@@ -84,23 +81,14 @@ function actualizarHabilidades() {
     const persuasion = parseInt(document.getElementById('persuasion').value) || 0;
     const engano = parseInt(document.getElementById('engano').value) || 0;
 
-    document.getElementById('mod_lucha').textContent = modFuerza;
-    document.getElementById('mod_levantar_peso').textContent = modFuerza;
-    document.getElementById('mod_esquivar').textContent = modAgilidad;
-    document.getElementById('mod_sigilo').textContent = modAgilidad;
-    document.getElementById('mod_resolver_acertijos').textContent = modInteligencia;
-    document.getElementById('mod_percepcion').textContent = modInteligencia;
-    document.getElementById('mod_persuasion').textContent = modCarisma;
-    document.getElementById('mod_engano').textContent = modCarisma;
-
-    document.getElementById('total_lucha').textContent = lucha + modFuerza + equipoLucha;
-    document.getElementById('total_levantar_peso').textContent = levantarPeso + modFuerza + equipoLevantarPeso;
-    document.getElementById('total_esquivar').textContent = esquivar + modAgilidad + equipoEsquivar;
-    document.getElementById('total_sigilo').textContent = sigilo + modAgilidad + equipoSigilo;
-    document.getElementById('total_resolver_acertijos').textContent = resolverAcertijos + modInteligencia + equipoResolverAcertijos;
-    document.getElementById('total_percepcion').textContent = percepcion + modInteligencia + equipoPercepcion;
-    document.getElementById('total_persuasion').textContent = persuasion + modCarisma + equipoPersuasion;
-    document.getElementById('total_engano').textContent = engano + modCarisma + equipoEngano;
+    document.getElementById('total_lucha').textContent = lucha + equipoLucha;
+    document.getElementById('total_levantar_peso').textContent = levantarPeso + equipoLevantarPeso;
+    document.getElementById('total_esquivar').textContent = esquivar + equipoEsquivar;
+    document.getElementById('total_sigilo').textContent = sigilo + equipoSigilo;
+    document.getElementById('total_resolver_acertijos').textContent = resolverAcertijos + equipoResolverAcertijos;
+    document.getElementById('total_percepcion').textContent = percepcion + equipoPercepcion;
+    document.getElementById('total_persuasion').textContent = persuasion + equipoPersuasion;
+    document.getElementById('total_engano').textContent = engano + equipoEngano;
 }
 
 // Añadir eventos 'input' para actualizar en vivo
